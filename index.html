@@ -149,6 +149,99 @@
             font-family: calibri;
             width: 50%;
         }
+
+        /*footer*/
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        ul{
+            list-style: none;
+        }
+        .footer{
+            background-color: #24262b;
+            padding: 40px 0;
+            position: absolute;
+        }
+        .footer-col{
+            width: 25%;
+            padding: 0 15px;
+        }
+        .footer-col > p{
+            font-size: 16px;
+            color: #ffffff;
+        }
+        .footer-col > h4 {
+            font-size: 40px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+            font-weight: 600;
+            position: relative;
+        }
+        .footer-col > ul > li:not(:last-child){
+            margin-bottom: 15px;
+        }
+        .footer-col > ul > li > a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .footer-col ul li a:hover{
+            color: #FF5300;
+            padding-left: 8px;
+        }
+        .footer-col > h2 {
+            font-size: 35px;
+            color: #FF5300;
+            text-transform: capitalize;
+            margin-bottom: 18px;
+            font-weight: 600;
+            position: relative;
+        }
+        .footer-col > h3{
+            font-size: 20px;
+            color: #FFFFFF;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+        }
+        .footer-col img {
+            width: 65px;
+            height: 65px;
+            position: relative;
+            margin-bottom: 15px;
+        }
+        .footer-bottom{
+            background: #FF5300;
+            color: #FFFFFF;
+            padding: 20px 0;
+            margin-top: 100px;
+            text-align: center;
+        }
+        .footer-bottom p{
+            font-size: 16px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+        }
+
+        /*responsive*/
+        @media(max-width: 767px){
+            .footer-col{
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+        @media(max-width: 574px) {
+            .footer-col {
+                width: 100%;
+            }
+        }
+
     </style>
 
 </head>
@@ -225,7 +318,7 @@
                     <p>
                         Have questions about my services? Let's talk about how we can help you
                         achieve your goals and take your business to the top! I would be happy to answer your questions and set up a meeting with you.
-                        I can help set you apart from the flock!
+                        <br> <br> I can help set you apart from the flock!
                     </p>
                 </div>
 
