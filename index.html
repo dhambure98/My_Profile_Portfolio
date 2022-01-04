@@ -85,12 +85,12 @@
             height:50%;
         }
         .text-intro > div > p{
-            font-size: 40px;
+            font-size: 50px;
             color: #fff;
-            font-weight: 300;
+            font-weight: 400;
         }
         #text-akila{
-            font-size: 40px;
+            font-size: 50px;
             font-weight: 700;
             color:#FF5300 ;
         }
@@ -100,36 +100,43 @@
         .contactme-button >a {
             text-decoration: none;
             color: #fff;
-            font-weight: 300;
+            font-weight: 400;
             font-size: 1.2em;
             border:1px solid #ff5300;
             border-radius: 25px;
-            padding:10px 20px;
+            padding:15px 25px;
         }
         .contactme-button >a:hover{
             border:1px solid #fff;
             background-color: #fff;
             color: #ff5300;
         }
+
         .profile-img{
-            width: 40%;
+            width: 45%;
             height: 80%;
             position: absolute;
             bottom: 0;
-            right: 90px;
+            right: 100px;
             z-index: 0;
         }
-        .profile-img > .vector{
-            height: 80%;
+        .profile-img img{
+            height: 100%;
             position: absolute;
-            left: 0;
+            left: 50%;
             bottom: 0;
-            transform: translate(10px);
+            transform: translateX(-50%);
             transition: bottom 1s, left 1s;
             z-index: -1;
         }
+        .profile-img:hover .vector{
+            bottom: 10px;
+        }
+        .profile-img:hover .img{
+            left: 44%;
+        }
 
-        .about{
+        .about-text{
             width: 100%;
             height: 100vh;
             box-sizing: border-box;
@@ -139,13 +146,15 @@
             padding: 50px 5% 0px 5%;
         }
         .about-text{
-            font-family: Calibri;
+            font-family: calibri;
             width: 50%;
         }
     </style>
 
 </head>
 <body>
+
+<!----- Home page ------>
 <section class="header">
     <div class="logo">
         <a href="#" > A<span style="color:#FF5300">D</span>L. </a>
@@ -168,6 +177,7 @@
     </div>
 </section>
 
+<!----- About me ------>
 <section class="container home">
     <div class="text-intro">
         <div>
@@ -179,24 +189,76 @@
     </div>
 
     <div class="profile-img">
-        <img src="assets/images/img.png" alt="" class="img">
         <img src="assets/images/vector.svg" alt="" class="vector">
+        <img src="assets/images/img.png" alt="" class="img">
     </div>
 </section>
 
 <section id="about">
+    <!--		<div class="about-image">-->
+    <!--			<img src="img/img-pro.jpg" alt="" class="about-img">-->
+    <!--		</div>-->
+
     <div class="about-text">
-        <h1>About Me</h1>
+        <h2 class="about-color-1">About Me</h2>
         <h2>i’m Akila Dhambure Liyanage</h2>
         <h1>From Hikkaduwa, Sri Lanka</h1>
         <p>Hi! I’m Akila a second-year undergraduate student from The Open University of Sri Lanka,
             Faculty of Electrical and Computer Engineering. I’m reading for BSc. in Software Engineering.
+            <br>
             I'm a follow Fullstack Java Developer & Web Designer from Galle, Sri lanka.</p>
     </div>
 
-<!--    <div class="about-img">-->
-<!--        <img src="assets/images/img-pro.jpg" alt="" class="img-pro">-->
-<!--    </div>-->
+
+
+    <!----- Contact Me ------>
+
+
+    <!-----	Footer ------->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="logo">
+                        <a href="#" > A<span style="color:#FF5300">D</span>L. </a>
+                    </div>
+                    <p>
+                        Have questions about my services? Let's talk about how we can help you
+                        achieve your goals and take your business to the top! I would be happy to answer your questions and set up a meeting with you.
+                        I can help set you apart from the flock!
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">App Development</a></li>
+                        <li><a href="#">Web Hosting</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <img src="assets/images/contact.png" alt="" class="contact">
+                    <h2> 24/7 Service </h2>
+                    <h3>(+94) 76 735 4857 (Toll Free) <br> (+94) 44 542 8815</h3>
+                </div>
+
+                <div class="footer-col">
+                    <img src="assets/images/location.png" alt="" class="location">
+                    <h2> Location </h2>
+                    <h3> 219/18, Egodahakoratuwa, Katukoliha, Dodanduwa, Sri Lanka.</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright &copy;2022. All Right Reserved By Akila Dhambure Liyanage </p>
+        </div>
+    </footer>
+
 </section>
 
 
