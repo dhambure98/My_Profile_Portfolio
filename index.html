@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,6 +16,7 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
         }
         .header{
             max-width: 100%;
@@ -56,8 +57,8 @@
             color: #FF5300;
             border: 1px solid #FF5300;
             padding: 10px;
-            border-radius: 10px;
-
+            border-radius: 8px;
+            font-weight: 500;
         }
         .corner-button >a:hover{
             border: 1px solid #fff;
@@ -95,7 +96,7 @@
         .contactme-button >a {
             text-decoration: none;
             color: #fff;
-            font-weight: 300;
+            font-weight: 400;
             font-size: 1em;
             border:1px solid #ff5300;
             border-radius: 20px;
@@ -131,7 +132,20 @@
             left: 44%;
         }
 
-        /*---------- about - us -------*/
+        /*---------- about-me -------*/
+        .about-text{
+            width: 100%;
+            height: 100vh;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 5% 0px 5%;
+            font-family: calibri;
+            font-size: 14px;
+        }
+
+        /*--------------Services--------------*/
         .about-text{
             width: 100%;
             height: 100vh;
@@ -141,13 +155,50 @@
             justify-content: space-between;
             padding: 50px 5% 0px 5%;
         }
-        .about-text{
-            font-family: calibri;
-            width: 70%;
-            font-size: 14px;
+
+        /*--------Skills----------*/
+        .using-now{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container3{
+            position: relative;
+        }
+        svg{
+            position: relative;
+            width: 150px;
+            height: 150px;
+        }
+        svg circle {
+            fill: none;
+            stroke-width : 10;
+            transform: translate(15px,15px);
+            stroke-dasharray: 380;
+            stroke-dashoffset:380;
+        }
+        svg circle:nth-child(1){
+            stroke-dashoffset:0;
+            stroke: #E7E7E7;
+        }
+        svg circle:nth-child(2){
+            stroke-dashoffset: calc(380 - (380*80)/100);
+            stroke: #CA00DC;
+        }
+        .container3 .img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        /*--------------Services--------------*/
+        /*------------ education--------------*/
+
+
 
         /*--------------contact---------------*/
         .container1{
@@ -437,7 +488,7 @@
     </div>
 
     <!----- Services ------->
-    <section class="services" id="services">
+    <section class="services">
         <div class="max-width">
             <h4 class="title">Services</h4>
             <h2 class="title">What We Do</h2>
@@ -489,48 +540,187 @@
         </div>
     </section>
 
-    <!----- Contact Me ------>
-    <div class="container1">
-        <div class="content">
-            <h2 class="title">Contact me</h2>
-            <div class="image-box">
-                <img src="assets/images/contactImg.png" alt="">
+    <!------ Skills ------>
+    <section id="skills">
+        <h2 class="about-color-1">Skills</h2>
+        <h4 class="about-color-1">Using Now :</h4>
+        <div class="using-now">
+            <div class="container3">
+                <svg>
+                    <circle cx="60" cy="60" r="60"></circle>
+                    <circle cx="60" cy="60" r="60"></circle>
+                </svg>
+                <div class="img">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/800px-HTML5_logo_and_wordmark.svg.png" alt="" width="70px">
+                </div>
+            </div>
+            <div class="text">
+                <p>HTML5</p>
+            </div>
+        </div>
+
+        <h4 class="about-color-1">Learning :</h4>
+        <div class="using-now">
+            <div class="container3">
+                <svg>
+                    <circle cx="60" cy="60" r="60"></circle>
+                    <circle cx="60" cy="60" r="60"></circle>
+                </svg>
+                <div class="img">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/800px-HTML5_logo_and_wordmark.svg.png" alt="" width="70px">
+                </div>
+            </div>
+            <div class="text">
+                <p>NODEJS</p>
+            </div>
+        </div>
+    </section>
+
+    <!--------- Experience ---------->
+    <section>
+        <h2 class="about-color-1">Experience</h2>
+
+    </section>
+
+
+    <!----- Education ------->
+    <section class="education">
+        <div class="container">
+            <h2 class="about-color-1">Education</h2>
+            <div class="wrapper">
+                <div class="center-line">
+                    <a href="#" class="scroll-icon"><i class="fas fa-caret-up"></i></a>
+                </div>
+
+                <div class="row row-1">
+                    <section>
+                        <i class="icon fas fa-home"></i>
+                        <div class="details">
+                            <span class="title">Undergraduate of Bachelor of Software Engineering</span>
+                        </div>
+                        <p>The Open University Nawala</p>
+                        <div class="bottom">
+                            <i>2020 - Present</i>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="row row-2">
+                    <section>
+                        <i class="icon fas fa-star"></i>
+                        <div class="details">
+                            <span class="title">Graduate Diploma in Software Engineering (GDSE)</span>
+                        </div>
+                        <p>Institute of Software Engineering</p>
+                        <div class="bottom">
+                            <i>2020 - Present</i>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="row row-1">
+                    <section>
+                        <i class="icon fas fa-rocket"></i>
+                        <div class="details">
+                            <span class="title"> Diploma in Network Administration </span>
+                        </div>
+                        <p> Lalith Athulathmudali Vocational Training Center </p>
+                        <div class="bottom">
+                            <i>2018 - 2019</i>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="row row-2">
+                    <section>
+                        <i class="icon fas fa-globe"></i>
+                        <div class="details">
+                            <span class="title">CCNA The Cisco Networking Academy</span>
+                        </div>
+                        <p>Cisco Networking Center, University Of Moratuwa.</p>
+                        <div class="bottom">
+                            <i>2018 - 2019</i>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="row row-1">
+                    <section>
+                        <i class="icon fas fa-paper-plane"></i>
+                        <div class="details">
+                            <span class="title">G.C.E. Advanced Level Examination</span>
+                        </div>
+                        <p>Richmond College , Galle</p>
+                        <div class="bottom">
+                            <i>2015 - 2017</i>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="row row-2">
+                    <section>
+                        <i class="icon fas fa-map-marker-alt"></i>
+                        <div class="details">
+                            <span class="title">G.C.E. Ordinary Level Examination</span>
+                        </div>
+                        <p>Richmond College , Galle</p>
+                        <div class="bottom">
+                            <i>2014</i>
+                        </div>
+                    </section>
+                </div>
+
             </div>
 
-            <form action="#">
-                <div class="topic">Send Your <span style="color:#FF5300">Message To Me</span></div>
-                <div class="input-box">
-                    <input type="text" required>
-                    <label>Name</label>
-                </div>
-
-                <div class="input-box">
-                    <input type="text" required>
-                    <label>Email</label>
-                </div>
-
-                <div class="input-box">
-                    <input type="text" required>
-                    <label>Mobile No</label>
-                </div>
-
-                <div class="input-box">
-                    <input type="text" required>
-                    <label>Subject</label>
-                </div>
-
-                <div class="message-box">
-                    <textarea></textarea>
-                    <label>Enter your message</label>
-                </div>
-
-                <div class="input-box">
-                    <input type="submit" value="Send Message">
-                </div>
-
-            </form>
         </div>
-    </div>
+    </section>
+
+
+
+    <!----- Contact Me ------>
+    <section id="contacts">
+        <div class="container1">
+            <div class="content">
+                <h2 class="title">Contact me</h2>
+                <div class="image-box">
+                    <img src="assets/images/contactImg.png" alt="">
+                </div>
+
+                <form action="#">
+                    <div class="topic">Send Your <span style="color:#FF5300">Message To Me</span></div>
+                    <div class="input-box">
+                        <input type="text" required>
+                        <label>Name</label>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" required>
+                        <label>Email</label>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" required>
+                        <label>Mobile No</label>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" required>
+                        <label>Subject</label>
+                    </div>
+
+                    <div class="message-box">
+                        <textarea></textarea>
+                        <label>Enter your message</label>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="submit" value="Send Message">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
 
     <!-----	Footer ------->
     <footer class="footer">
@@ -572,9 +762,7 @@
             <p>Copyright &copy;2022. All Right Reserved By Akila Dhambure Liyanage </p>
         </div>
     </footer>
-
 </section>
-
 
 
 
