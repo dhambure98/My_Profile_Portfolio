@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>(Creating car animation)</title>
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="assets/fonts/css/all.css" rel="stylesheet">
+
+    <style>
+        body {
+            overflow: hidden;
+        }
+        .sky {
+            background: url("assets/images/car_animation/sky.jpg");
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        .road{
+            background: url("assets/images/car_animation/road.jpg");
+            width: 6000px;
+            height: 47%;
+            background-repeat: repeat;
+            position: absolute;
+            bottom: 0;
+            animation: building 10s infinite;
+        }
+        .building{
+            background: url("assets/images/car_animation/city.png");
+            width: 6000px;
+            height: 37%;
+            background-repeat: repeat;
+            position: absolute;
+            bottom: 42%;
+            animation: building 10s infinite;
+        }
+
+        .car img:first-child{
+            width: 450px;
+            position: absolute;
+            margin: auto;
+            top: 125px;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+        .car img:nth-child(2){
+            width: 70px;
+            position: absolute;
+            margin: auto;
+            top: 188PX;
+            bottom: 0;
+            right: 288PX;
+            left: 0;
+            animation: car 10s infinite;
+        }
+        .car img:nth-child(3){
+            width: 70px;
+            position: absolute;
+            margin: auto;
+            top: 188PX;
+            bottom: 0;
+            right: 0;
+            left: 265PX;
+            animation: car 10s infinite;
+        }
+        @keyframes building {
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(-70%);
+            }
+        }
+        @keyframes car {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(2000deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="sky">
+    <div class="building"></div>
+    <div class="road"></div>
+    <div class="car">
+        <img src="assets/images/car_animation/car.png" alt="">
+        <img src="assets/images/car_animation/wheel.png" alt="">
+        <img src="assets/images/car_animation/wheel.png" alt="">
+    </div>
+</div>
+
+<!--<script>-->
+<!--    setTimeout(function(){-->
+<!--        if (confirm("Here the gitHub code!")) {-->
+<!--            window.open(href='https://github.com/dhambure98/Web_InClass_Assignments/tree/master/CSS/Animation/Case%2006','_blank');-->
+<!--        } else {-->
+<!--        }-->
+<!--    },10000);-->
+<!--</script>-->
+
+</body>
+</html>

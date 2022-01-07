@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>(Using Basic Rotations with animation)</title>
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="assets/css/fonts/css/all.css" rel="stylesheet">
+
+    <style>
+    section {
+        margin-top: 50px;
+        position: relative;
+        height: 95px;
+        width: 170px;
+        border-radius: 20px;
+        animation: animate;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes animate {
+        0% {
+            left: 0;
+            top: 0;
+            background-color: blue;
+        }
+
+        35% {
+            left: 1500px;
+            top: 0;
+            background-color: yellow;
+            transform: rotate(360deg);
+        }
+
+        50% {
+            left: 1500px;
+            top: 590px;
+            background-color: red;
+            transform: rotate(540deg);
+        }
+
+        90% {
+            left: 0;
+            top: 590px;
+            background-color: deeppink;
+            transform: rotate(180deg);
+        }
+
+        100% {
+            left: 0;
+            top: 0;
+            background-color: darkorange;
+        }
+    }
+    </style>
+
+</head>
+    <body>
+        <section></section>
+    </body>
+</html>
