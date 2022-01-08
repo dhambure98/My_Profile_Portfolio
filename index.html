@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<!----- Home page ------>
+<!-------Navigation Bar-------->
 <section class="header">
     <div class="logo">
         <a href="#" > A<span style="color:#FF5300">D</span>L. </a>
@@ -21,21 +21,22 @@
     <nav class="nav-container">
         <ul class="nav-links">
             <li><a href="#"> Home </a></li>
-            <li><a href="#"> About </a></li>
-            <li><a href="#"> Services </a></li>
-            <li><a href="#"> Skills </a></li>
-            <li><a href="#"> Experience </a></li>
-            <li><a href="#"> Education </a></li>
-            <li><a href="#"> Projects </a></li>
-            <li><a href="#"> Contact Me </a></li>
+            <li><a href="#about"> About </a></li>
+            <li><a href="#services"> Services </a></li>
+            <li><a href="#skills"> Skills </a></li>
+            <li><a href="#experience"> Experience </a></li>
+            <li><a href="#education"> Education </a></li>
+            <li><a href="#Portfolio"> Projects </a></li>
+            <li><a href="#contacts"> Contact Me </a></li>
         </ul>
 
     </nav>
     <div class="corner-button">
-        <a href="#"> Let's talk </a>
+        <a href="#contacts"> Let's talk </a>
     </div>
 </section>
 
+<!----- Home page ------>
 <section class="container home">
     <div class="text-intro">
         <div>
@@ -43,7 +44,7 @@
             <p id="text-akila">Akila Liyanage</p>
             <p>Software Developer</p>
         </div>
-        <div class="contactme-button"><a href="#">CONTACT ME</a></div>
+        <div class="contactme-button"><a href="#contacts">CONTACT ME</a></div>
     </div>
 
     <div class="profile-img">
@@ -54,36 +55,39 @@
 
 <!----- About me ------>
 <section id="about">
-    <!--		<div class="about-image">-->
-    <!--			<img src="img/img-pro.jpg" alt="" class="about-img">-->
-    <!--		</div>-->
-
-    <div class="about-text">
-        <h2 class="title">About me</h2>
-        <!--			<div class="about-content">-->
-        <!--				<div class="column left">-->
-        <!--					<img src="images/profile-1.jpeg" alt="">-->
-        <!--				</div>-->
-        <!--				<div class="column right">-->
-        <!--					<h2>i’m Akila Dhambure Liyanage</h2>-->
-        <!--					<h1>From Hikkaduwa, Sri Lanka</h1>-->
-        <!--					<p>Hi! I’m Akila a second-year undergraduate student from The Open University of Sri Lanka,-->
-        <!--						Faculty of Electrical and Computer Engineering. I’m reading for BSc. in Software Engineering.-->
-        <!--						<br>-->
-        <!--						I'm a follow Fullstack Java Developer & Web Designer from Galle, Sri lanka.</p>-->
-        <!--					<a href="#">Download CV</a>-->
-        <!--				</div>-->
-        <!--			</div>-->
-        <h2 class="about-color-1">About Me</h2>
-        <h2>i’m Akila Dhambure Liyanage</h2>
-        <h1>From Hikkaduwa, Sri Lanka</h1>
-        <p>Hi! I’m Akila a second-year undergraduate student from The Open University of Sri Lanka,
-            Faculty of Electrical and Computer Engineering. I’m reading for BSc. in Software Engineering.
-            <br>
-            I'm a follow Fullstack Java Developer & Web Designer from Galle, Sri lanka.</p>
+    <div class="section-title">
+        <h1>About Me</h1>
     </div>
+    <div class="about-box">
+        <div class="left-side">
+            <img src="assets/images/Vector2.svg" alt="" class="vector-shape">
+            <img src="assets/images/img-pro.jpg" alt="">
+        </div>
+        <div class="right-side">
+            <div>
+                <h1>i’m Akila Dhambure Liyanage</h1>
+                <h3>From Hikkaduwa, Sri Lanka</h3>
+            </div>
+            <div>Hi! I’m Akila a second-year undergraduate student from The Open University of Sri Lanka, Faculty of Electrical and Computer Engineering. I’m reading for BSc. in Software Engineering. I'm a follow Fullstack Java Developer & Web Designer from Galle, Sri lanka.</div>
+            <div>
+                <p>JAVA Developer</p>
+                <p>Web Developer</p>
+            </div>
+            <div>
+                <button>VIEW MY CV</button>
+            </div>
+            <div>
+                <img src="assets/icon/sm-1.svg" alt="">
+                <img src="assets/icon/sm-2.svg" alt="">
+                <img src="assets/icon/sm-3.svg" alt="">
+                <img src="assets/icon/sm-4.svg" alt="">
+                <img src="assets/icon/sm-5.svg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!----- Services ------->
+<!----- Services ------->
     <section class="services">
         <div class="max-width">
             <h4 class="title">Services</h4>
@@ -190,7 +194,7 @@
 
                 <div class="row row-1">
                     <section>
-                        <i class="icon fas fa-home"></i>
+                        <i class="icon fas fa-home"><img src="assets/icon/university.png"></i>
                         <div class="details">
                             <span class="title">Undergraduate of Bachelor of Software Engineering</span>
                         </div>
@@ -203,7 +207,7 @@
 
                 <div class="row row-2">
                     <section>
-                        <i class="icon fas fa-star"></i>
+                        <i class="icon fas fa-star"><img src="assets/icon/university.png"></i>
                         <div class="details">
                             <span class="title">Graduate Diploma in Software Engineering (GDSE)</span>
                         </div>
@@ -271,7 +275,8 @@
         </div>
     </section>
 
-
+    <!------ Projects --------->
+    
 
     <!----- Contact Me ------>
     <section id="contacts">
