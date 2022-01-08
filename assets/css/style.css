@@ -433,6 +433,53 @@ svg circle:nth-child(1){
     stroke: #199867;
 }
 
+/*------------styling experience--------------*/
+#experience{
+    min-height: 125vh;
+}
+.ex-container{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.ex-container > .box-3{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    padding: 50px 30px;
+}
+.ex-container > .box-3:nth-child(1){
+    justify-content: flex-start;
+    border-right:2px dashed ;
+}
+.ex-container > .box-3:nth-child(2){
+    justify-content: flex-end;
+    border-top:2px dashed ;
+    border-left:2px dashed ;
+}
+.ex-box{
+    padding: 30px;
+    width: 100%;
+    background-color: #F5D8D8;
+    border-radius: 8px;
+}
+
+.more-info{
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+.more-info > button{
+    border: none;
+    border-radius: 20px;
+    background-color: #FF5300;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
 /*------------ education--------------*/
 .education{
     background-color: #616161;
