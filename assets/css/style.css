@@ -223,11 +223,17 @@
     color: #fff;
     width: 200px;
     font-size: 16px;
-    padding: 10px;
+    padding: 8px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
 }
+.about-box .right-side div:nth-child(4) button:hover{
+    border:1px solid #ff5300;
+    background-color: #fff;
+    color: #ff5300;
+}
+
 .about-box .right-side div:nth-child(5){
     margin-top: 20px;
     display: flex;
