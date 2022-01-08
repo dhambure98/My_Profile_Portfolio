@@ -588,11 +588,9 @@ svg circle:nth-child(1){
 /*--------------contact---------------*/
 .container1{
     z-index: 10;
-    max-width: 1000px;
-    width: 100%;
     background: #fff;
     border-radius: 10px;
-    margin: 0 20px;
+    margin: 0 200px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 .container1 .content{
@@ -610,7 +608,7 @@ svg circle:nth-child(1){
 .content .topic{
     font-size: 22px;
     font-weight: 500;
-    color: #ba24c2;
+    color: #202022;
 }
 .content form{
     width: 40%;
@@ -636,8 +634,8 @@ svg circle:nth-child(1){
 }
 .content .input-box input:focus,
 .content .input-box input:valid{
-    border-color: #ba24c2;
     background-color: #fff;
+    background: #fae9fb;
 }
 .content .input-box label{
     position: absolute;
@@ -694,7 +692,7 @@ svg circle:nth-child(1){
 }
 .content .input-box input[type="submit"]{
     color: #fff;
-    background: #ba24c2;
+    background: #FF5300;
     padding-left: 0;
     font-size: 18px;
     font-weight: 500;
@@ -703,7 +701,7 @@ svg circle:nth-child(1){
     transition: all 0.3s ease;
 }
 .content .input-box input[type="submit"]:hover{
-    background-color: #d43ddb;
+    background-color: #cf390a;
 }
 
 /*--------------footer----------------*/
