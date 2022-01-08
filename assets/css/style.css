@@ -465,7 +465,6 @@ svg circle:nth-child(1){
     background-color: #F5D8D8;
     border-radius: 8px;
 }
-
 .more-info{
     margin-top: 80px;
     display: flex;
@@ -482,11 +481,8 @@ svg circle:nth-child(1){
 
 /*------------ education--------------*/
 .education{
+    min-height: 130vh;
     background-color: #616161;
-    padding: 0 100px;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
 }
 .wrapper{
     max-width: 1100px;
@@ -586,7 +582,6 @@ svg circle:nth-child(1){
     text-decoration: none;
     text-align: center;
     color: #AFA5A5;
-    font-weight: 400;
 }
 
 
