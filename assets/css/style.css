@@ -246,14 +246,42 @@
 }
 
 /*--------------Services--------------*/
-.about-text{
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
+#services{
+    min-height: 150vh;
+    background-color: #616161;
+}
+#services > h2{
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+.serv-content {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.serv-content .card{
+    width: 320px;
+    height: 320px;
+    background-color: #fff;
+    border-radius: 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 50px 5% 0px 5%;
+    padding: 40px 10px;
+    text-align: center;
+}
+.serv-content .card p{
+    font-size: 12px;
+}
+.serv-content .card:hover{
+    background-color: #FF5300;
+    color: #fff;
 }
 
 /*--------Skills----------*/
