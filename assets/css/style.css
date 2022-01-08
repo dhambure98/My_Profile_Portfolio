@@ -1,3 +1,8 @@
+<!--/**
+* @author : A.D.Liyanage
+* @since : 0.1.0
+**/-->
+
 *,body, html{
     margin: 0;
     padding: 0;
@@ -5,6 +10,8 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
+
+/*-----Styling Navigation Bar-------*/
 .header{
     max-width: 100%;
     height: 65px;
@@ -52,6 +59,8 @@
     background-color: #fff;
 
 }
+
+/*----Styling Home page-----*/
 .container{
     width: 100%;
     padding: 0 100px;
@@ -120,16 +129,114 @@
 }
 
 /*---------- about-me -------*/
-.about-text{
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
+#about {
+    min-height: 100vh;
+}
+.section-title{
+    margin: 20px 0 50px;
+}
+.section-title h1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(10px);
+    text-align: center;
+    color: #FF5300;
+    font-size: 35px;
+    font-weight: 500;
+}
+.section-title h1::before{
+    transform: translateY(8px);
+    content: "";
+    position: absolute;
+    background-color: #FF5300;
+    width: 50px;
+    height: 5px;
+    bottom: 0;
+    border-radius: 20px;
+}
+.about-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.about-box .left-side{
+    width: 40%;
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 50px 5% 0px 5%;
-    font-family: calibri;
-    font-size: 14px;
+}
+.about-box .left-side img:nth-child(2){
+    left: 20%;
+    position: absolute;
+    width: 400px;
+    border-radius: 10px;
+    animation-name: about-image;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes about-image {
+    from {
+        left: 100px;
+    }
+    to {
+        left: 170px;
+    }
+}
+
+.about-box .right-side{
+    width: 50%;
+    padding-right: 100px;
+}
+.about-box .right-side div:nth-child(1) h3 {
+    color:#FF5300 ;
+    font-size: 20px;
+}
+.about-box .right-side div:nth-child(2){
+    margin-top: 20px;
+}
+.about-box .right-side div:nth-child(3){
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-box .right-side div:nth-child(3) p{
+    text-align: center;
+    background-color: #FFCBCB;
+    color: #FF5300;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 18px;
+}
+.about-box .right-side div:nth-child(4){
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.about-box .right-side div:nth-child(4) button {
+    background-color: #FF5300;
+    color: #fff;
+    width: 200px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.about-box .right-side div:nth-child(5){
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-box .right-side div:nth-child(5) img{
+    margin-right: 20px;
+    cursor: pointer;
 }
 
 /*--------------Services--------------*/
