@@ -9,7 +9,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    box-sizing: border-box;
+    transition: all 0.3s ease-out;
 }
 
 /* ----- custom scroll bar ------*/
@@ -69,10 +69,9 @@
     border-radius: 8px;
     font-weight: 500;
 }
-.corner-button >a:hover{
+.corner-button >a:hover {
     border: 1px solid #fff;
     background-color: #fff;
-
 }
 
 /*----Styling Home page-----*/
@@ -87,6 +86,7 @@
     justify-content: space-between;
     background-color: #313135;
     height: 90vh;
+    background-attachment: fixed;
 }
 .text-intro{
     height: 50%;
@@ -298,6 +298,7 @@
 .serv-content .card:hover{
     background-color: #FF5300;
     color: #fff;
+    transition: all 0.3s ease-out;
 }
 
 /*--------Skills----------*/
