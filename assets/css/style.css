@@ -659,6 +659,26 @@ svg circle:nth-child(1){
     display: block;
     padding: 20px 20px;
 }
+.portfolio .portfolio-gallery .item img:hover{
+    position: relative;
+    padding: 8px;
+}
+.btn{
+    background: #ff4321;
+    border-radius: 15px;
+    padding: 0 30px;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    border: 1px solid transparent;
+    transition: all 0.4s ease;
+    transform: translate(85px, 6px);
+}
+.btn:hover{
+    background: transparent;
+    color: #ff4321;
+    border: 1px solid #ff4321;
+}
 
 /*--------------contact---------------*/
 .container1{
