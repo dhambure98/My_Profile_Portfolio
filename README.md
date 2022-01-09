@@ -1,5 +1,5 @@
 # My-Portfolio
-This is my profile in Web
+Creating my own portfolio using learning basic web technologies HTML/CSS.
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -16,19 +16,26 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the documentation
 
-## InClass Assignments 
+## Using Tools 
 
-Assignment 01 : https://github.com/dhambure98/Web_InClass_Assignments/tree/master/CSS/Case%2001
+Design Tools - Adobe XD / Figma
 
-Assignment 02 : https://github.com/dhambure98/Web_InClass_Assignments/tree/master/CSS/Case%2002
+<!-- CONTACT -->
+## Contact Links
 
-Assignment 03 : https://github.com/dhambure98/Web_InClass_Assignments/tree/master/CSS/Case%2003
+Site Map : https://www.gloomaps.com/qv7kEpEKMe
 
-Assignment 04 : https://github.com/dhambure98/Web_InClass_Assignments/tree/master/CSS/Case%2004
+WireFrame : https://wireframe.cc/LVEhwh
 
-Assignment 05 : https://github.com/dhambure98/Web_InClass_Assignments/tree/master/CSS/Animation/Case%2001
+Mockup : https://www.figma.com/file/Uh5oWpJf19By5XbAuQDY6E/Personal-Portfolio-Prototype?node-id=0%3A813
 
-Assignment 06 : https://github.com/dhambure98/Web_InClass_Assignments/tree/master/CSS/Animation/Case%2002
+Linkedin Account - [https://www.linkedin.com/in/akila-dhambure-liyanage-034162173/](https://www.linkedin.com/in/akila-dhambure-liyanage-034162173/) 
+
+Github Page Link : https://github.com/dhambure98
+
+Personal Profile : https://akilaportfolio.000webhostapp.com/
+
+Project Link: [https://github.com/dhambure98/My_Profile_Portfolio](https://github.com/your_username/repo_name)
 
 
 <!-- ROADMAP -->
@@ -58,22 +65,7 @@ Copyright @ 2021 My Profile All Right Reserved By Akila Dhambure Liyanage
 
 
 
-<!-- CONTACT -->
-## Contact
 
-Your Name - [https://www.linkedin.com/in/akila-dhambure-liyanage-034162173/](https://www.linkedin.com/in/akila-dhambure-liyanage-034162173/) 
-
-My Personal Web Site Map : https://www.gloomaps.com/qv7kEpEKMe
-
-My Personal Web Wire Frame : https://wireframe.cc/LVEhwh
-
-My Personal Web Mockup : https://www.figma.com/file/Uh5oWpJf19By5XbAuQDY6E/Personal-Portfolio-Prototype?node-id=0%3A813
-
-My Github Page Link : https://github.com/dhambure98
-
-My Personal Profile : https://akilaportfolio.000webhostapp.com/
-
-Project Link: [https://github.com/dhambure98/My_Profile_Portfolio](https://github.com/your_username/repo_name)
 
 
 
