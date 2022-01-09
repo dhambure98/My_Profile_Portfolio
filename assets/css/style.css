@@ -148,7 +148,7 @@
     min-height: 100vh;
 }
 .section-title{
-    margin: 20px 0 50px;
+    margin: 10px 0 80px;
 }
 .section-title h1{
     position: relative;
@@ -612,7 +612,7 @@ svg circle:nth-child(1){
 }
 .portfolio{
     background-color: white;
-    padding: 50px 50px;
+    padding: 0 144px;
     scroll-margin-top : 70px;
 }
 .portfolio .filter-buttons{
@@ -673,7 +673,7 @@ svg circle:nth-child(1){
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 70px 20px;
+    padding: 70px 0;
 }
 .content .image-box{
     max-width: 60%;
@@ -859,7 +859,64 @@ ul{
     text-transform: capitalize;
 }
 
-/*responsive*/
+/*--------responsive---------------*/
+@media all and (max-width: 425px){
+    .header{
+        padding: 20px;
+    }
+    .nav-links{
+        visibility: hidden;
+    }
+    .corner-button{
+        padding: 20px;
+        transform: translate(24px, 0);
+    }
+    .profile-img{
+        visibility: hidden;
+    }
+    .section.container.home{
+        padding: 25px;
+    }
+
+    .serv-content{
+        display: flex;
+        height: 500vh;
+    }
+    .section-title .h4{
+        transform: translateX(33px);
+        margin-bottom: 34px;
+    }
+    .ex-container > .box-3 {
+        padding: 10px;
+        width: auto;
+    }
+    .about-box .left-side img:nth-child(2) {
+        width: 200px;
+    }
+    .row section .bottom i {
+        transform: translate(5px,-2px);
+    }
+    .about-box .right-side {
+        transform: translate(-146px, 46px);
+        font-size: small;
+    }
+    .container1 {
+        margin: 0 -16px;
+        transform: translate(-27px, 62px);
+    }
+    .about-box .left-side {
+        transform: translate(-35px, -132px);
+    }
+
+    .content .image-box {
+        transform: translate(97px, -245px);
+    }
+    .content form {
+        margin-right: -181px;
+        transform: translate(-298px, 107px);
+    }
+}
+
 @media(max-width: 767px){
     .footer-col{
         width: 50%;
