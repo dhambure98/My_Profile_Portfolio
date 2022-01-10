@@ -1,0 +1,138 @@
+<!--/**
+* @author : A.D.Liyanage
+* @since : 0.1.0
+**/-->
+
+*,body, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    transition: all 0.3s ease-out;
+    transform: translate(0px, 5px);
+}
+/* ----- custom scroll bar ------*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/*-------------projects-------------*/
+.section-title h1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(1px);
+    text-align: center;
+    color: #FF5300;
+    font-size: 35px;
+    font-weight: 500;
+}
+.section-title h1::before{
+    transform: translateY(8px);
+    content: "";
+    position: absolute;
+    background-color: #FF5300;
+    width: 50px;
+    height: 5px;
+    bottom: 0;
+    border-radius: 20px;
+}
+
+
+.text-center{
+    text-align: center!important;
+}
+.text-right{
+    text-align: right!important;
+}
+.portfolio{
+    background-color: white;
+    padding: 0 100px;
+    scroll-margin-top : 70px;
+}
+.portfolio .filter-buttons{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+.portfolio .filter-buttons ul{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+.portfolio .filter-buttons ul li{
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding-bottom: 0;
+}
+.portfolio .filter-buttons ul li.active{
+    color: #febd01;
+    border-bottom: 2px solid #febd01;
+}
+.portfolio .portfolio-gallery{
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.portfolio .portfolio-gallery .item{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    position: relative;
+    padding: 8px;
+}
+.portfolio .portfolio-gallery .item .inner{
+    position: relative;
+}
+.portfolio .portfolio-gallery .item img{
+    width: 100%;
+    display: block;
+    padding: 20px 20px;
+}
+.portfolio .portfolio-gallery .item img:hover{
+    position: relative;
+    padding: 8px;
+}
+.btn{
+    background: #ff4321;
+    border-radius: 15px;
+    padding: 0 30px;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    border: 1px solid transparent;
+    transition: all 0.4s ease;
+    transform: translate(100px, 6px);
+}
+.btn:hover{
+    background: transparent;
+    color: #ff4321;
+    border: 1px solid #ff4321;
+}
+.more-info{
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+.more-info > button{
+    border: none;
+    border-radius: 20px;
+    background-color: #FF5300;
+    color: #fff;
+    transform: translate(0px,-35px);
+    padding: 10px 20px;
+    cursor: pointer;
+}
