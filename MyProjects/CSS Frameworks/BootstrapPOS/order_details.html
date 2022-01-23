@@ -5,141 +5,181 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Order Details | POS System</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
-</head>
-<body>
-<!-- nav bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-success  ">
-    <div class="container-fluid">
-        <a class="navbar-brand text-white" href="index.html">Home</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="customer.html">Customer</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="item.html">Item</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="orders.html">Order</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="order_details.html">Order Details</a>
-                </li>
-            </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-warning" type="submit">Search</button>
-            </form>
-        </div>
-    </div>
-</nav>
 
-<!-- order_details form -->
-<div class="container-fluid mt-5" id="order_details">
-    <div class="row mt-1 p-0">
-        <div class="col-4">
-            <table class="table table-hover border mt-1">
-                <thead class="" style="background: #9370DB">
-                <tr>
-                    <th scope="col">Order ID</th>
-                    <th scope="col">Customer ID</th>
-                    <th scope="col">Date</th>
-                </tr>
-                </thead>
-                <tbody class="" style="background: white">
-                <tr>
-                    <th scope="row">1</th>
-                    <td>...</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>...</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>...</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>...</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>...</td>
-                    <td>...</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-8">
-            <table class="table table-hover border mt-1">
-                <thead class="" style="background: #9370DB">
-                <tr>
-                    <th scope="col">Order ID</th>
-                    <th scope="col">Item Code</th>
-                    <th scope="col">Item Name</th>
-                    <th scope="col">Unit Price</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Total</th>
-                </tr>
-                </thead>
-                <tbody class="" style="background: white">
-                <tr>
-                    <th scope="row">1</th>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                </tr>
-                </tbody>
-            </table>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Items | POS System</title>
+</head>
+
+<body>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-white" id="sidebar-wrapper">
+        <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i
+                class="fas fa-user-secret me-2"></i>ADL System</div>
+        <div class="list-group list-group-flush my-3">
+            <a href="index.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                    class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
+            <a href="customer.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                    class="fas fa-project-diagram me-2"></i>Customer</a>
+            <a href="item.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                    class="fas fa-chart-line me-2"></i>Items</a>
+            <a href="orders.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                    class="fas fa-paperclip me-2"></i>Order</a>
+            <a href="order_details.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                    class="fas fa-shopping-cart me-2"></i>Order Details</a>
+            <a href="login.html" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
+                    class="fas fa-power-off me-2"></i>Logout</a>
         </div>
     </div>
-</div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+                <h2 class="fs-2 m-0">Order Details</h2>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
+                           role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user me-2"></i>A D Liyanage
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <!-- order_details form -->
+        <div class="container-fluid mt-3" id="order_details">
+            <div class="row mt-1 p-0">
+                <div class="col-4">
+                    <table class="table table-hover border mt-1">
+                        <thead class="" style="background: #9370DB">
+                        <tr>
+                            <th scope="col">Order ID</th>
+                            <th scope="col">Customer ID</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                        </thead>
+                        <tbody class="" style="background: white">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-8">
+                    <table class="table table-hover border mt-1">
+                        <thead class="" style="background: #9370DB">
+                        <tr>
+                            <th scope="col">Order ID</th>
+                            <th scope="col">Item Code</th>
+                            <th scope="col">Item Name</th>
+                            <th scope="col">Unit Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody class="" style="background: white">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script>
+            var el = document.getElementById("wrapper");
+            var toggleButton = document.getElementById("menu-toggle");
+
+            toggleButton.onclick = function () {
+                el.classList.toggle("toggled");
+            };
+        </script>
 </body>
 </html>
+
