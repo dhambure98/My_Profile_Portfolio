@@ -5,221 +5,260 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Orders | POS System</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
 </head>
+
 <body>
-<!-- nav bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-success  ">
-    <div class="container-fluid">
-        <a class="navbar-brand text-white" href="index.html">Home</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="customer.html">Customer</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="item.html">Item</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="orders.html">Order</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="order_details.html">Order Details</a>
-                </li>
-            </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-warning" type="submit">Search</button>
-            </form>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-white" id="sidebar-wrapper">
+        <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i
+                class="fas fa-user-secret me-2"></i>ADL System</div>
+        <div class="list-group list-group-flush my-3">
+            <a href="index.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                    class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
+            <a href="customer.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                    class="fas fa-project-diagram me-2"></i>Customer</a>
+            <a href="item.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                    class="fas fa-chart-line me-2"></i>Items</a>
+            <a href="orders.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                    class="fas fa-paperclip me-2"></i>Order</a>
+            <a href="order_details.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                    class="fas fa-shopping-cart me-2"></i>Order Details</a>
+            <a href="login.html" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
+                    class="fas fa-power-off me-2"></i>Logout</a>
         </div>
     </div>
-</nav>
+    <!-- /#sidebar-wrapper -->
 
-<!-- order form -->
-<div class="container-fluid mt-3" id="orderform">
-    <h1 class="mx-4">Order Form</h1>
-    <div class="row mt-1 p-0">
-        <div class="col-xl-6">
-            <div class="bg-white card">
-                <div class="card-header text-white" style="font-size: 23px; background: #2E8B57">
-                    Manage Orders
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+                <h2 class="fs-2 m-0">Orders</h2>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
+                           role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user me-2"></i>A D Liyanage
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- order form -->
+        <div class="container-fluid mt-3" id="orderform">
+            <div class="row mt-1 p-0">
+                <div class="col-xl-6">
+                    <div class="bg-white card">
+                        <div class="card-header text-white" style="font-size: 23px; background: #2E8B57">
+                            Manage Orders
+                        </div>
+                        <div class="card-body bg-white text-dark">
+                            <div class="row p-0 mt-1">
+                                <div class="form-group col-6">
+                                    <lable>Order ID</lable>
+                                    <input type="text" id="txtOrderId" class="form-control">
+                                </div>
+                                <div class="form-group col-6">
+                                    <lable>Date</lable>
+                                    <input type="date" id="txtDate" class="form-control" >
+                                </div>
+                            </div>
+                            <div class="row p-0 mt-1">
+                                <div class="form-group col-4">
+                                    <label>Customer ID</label>
+                                    <select aria-label="Default select example" class="form-select" id="cmbCustomerID">
+                                        <option value="0"></option>
+                                        <option value="1">C001</option>
+                                        <option value="2">C002</option>
+                                        <option value="3">C003</option>
+                                        <option value="4">C004</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-8">
+                                    <lable>Customer Name</lable>
+                                    <input type="text" id="txtCustomerName" class="form-control" >
+                                </div>
+                            </div>
+                            <div class="row p-0 mt-1">
+                                <div class="form-group col-4">
+                                    <label>Item Code</label>
+                                    <select aria-label="Default select example" class="form-select" id="cmbItemCode">
+                                        <option value="0"></option>
+                                        <option value="1">I001</option>
+                                        <option value="2">I002</option>
+                                        <option value="3">I003</option>
+                                        <option value="4">I004</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-8">
+                                    <lable>Item Name</lable>
+                                    <input type="text" id="txtItemName" class="form-control" >
+                                </div>
+                            </div>
+                            <div class="row p-0 mt-1">
+                                <div class="form-group col-6">
+                                    <lable>In Stocks</lable>
+                                    <input type="number" id="txtInStocks" class="form-control">
+                                </div>
+                                <div class="form-group col-6">
+                                    <lable>Unit Price</lable>
+                                    <input type="number" id="txtUnitPrice" class="form-control" >
+                                </div>
+                                <div class="form-group col-6">
+                                    <lable>Quantity</lable>
+                                    <input type="number" id="txtQuantity" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row p-0 mt-1" align="right">
+                                <div class="form-group col-12">
+                                    <button type="button" class="btn bg-warning text-white fw-bold">Add To List</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body bg-white text-dark">
-                    <div class="row p-0 mt-1">
-                        <div class="form-group col-6">
-                            <lable>Order ID</lable>
-                            <input type="text" id="txtOrderId" class="form-control">
-                        </div>
-                        <div class="form-group col-6">
-                            <lable>Date</lable>
-                            <input type="date" id="txtDate" class="form-control" >
-                        </div>
-                    </div>
-                    <div class="row p-0 mt-1">
-                        <div class="form-group col-4">
-                            <label>Customer ID</label>
-                            <select aria-label="Default select example" class="form-select" id="cmbCustomerID">
-                                <option value="0"></option>
-                                <option value="1">C001</option>
-                                <option value="2">C002</option>
-                                <option value="3">C003</option>
-                                <option value="4">C004</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-8">
-                            <lable>Customer Name</lable>
-                            <input type="text" id="txtCustomerName" class="form-control" >
-                        </div>
-                    </div>
-                    <div class="row p-0 mt-1">
-                        <div class="form-group col-4">
-                            <label>Item Code</label>
-                            <select aria-label="Default select example" class="form-select" id="cmbItemCode">
-                                <option value="0"></option>
-                                <option value="1">I001</option>
-                                <option value="2">I002</option>
-                                <option value="3">I003</option>
-                                <option value="4">I004</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-8">
-                            <lable>Item Name</lable>
-                            <input type="text" id="txtItemName" class="form-control" >
-                        </div>
-                    </div>
-                    <div class="row p-0 mt-1">
-                        <div class="form-group col-6">
-                            <lable>In Stocks</lable>
-                            <input type="number" id="txtInStocks" class="form-control">
-                        </div>
-                        <div class="form-group col-6">
-                            <lable>Unit Price</lable>
-                            <input type="number" id="txtUnitPrice" class="form-control" >
-                        </div>
-                        <div class="form-group col-6">
-                            <lable>Quantity</lable>
-                            <input type="number" id="txtQuantity" class="form-control">
-                        </div>
-                    </div>
+                <div class="col-xl-6">
+                    <table class="table table-hover border mt-1">
+                        <thead class="" style="background: #9370DB">
+                        <tr>
+                            <th scope="col">Item Code</th>
+                            <th scope="col">Item Name</th>
+                            <th scope="col">Unit Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody class="" style="background: white">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tbody>
+                    </table>
                     <div class="row p-0 mt-1" align="right">
                         <div class="form-group col-12">
-                            <button type="button" class="btn bg-warning text-white fw-bold">Add To List</button>
+                            <button type="button" class="btn btn-success">Clear</button>
+                            <button type="button" class="btn btn-success">Clear List</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 p-2">
+                    <div class="bg-white card">
+                        <div class="card-header text-white" style="font-size: 23px; background: #2E8B57">
+                            Manage Payments
+                        </div>
+                        <div class="card-body bg-white text-dark ">
+                            <div class="row p-0 mt-1">
+                                <div class="form-group col-12">
+                                    <lable>Cash</lable>
+                                    <input type="number" id="txtCash" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row p-0 mt-1">
+                                <div class="form-group col-12">
+                                    <lable>Discount</lable>
+                                    <input type="number" id="txtDiscount" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row p-0 mt-1">
+                                <div class="form-group col-12">
+                                    <lable>Balance</lable>
+                                    <input type="number" id="txtBalance" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 p-2">
+                    <div class="bg-white card">
+                        <div class="card-header text-white" style="font-size: 23px; background: #2E8B57">
+                            Sub Total
+                        </div>
+                        <div class="card-body bg-white text-dark ">
+                            <div class="row p-0 mt-1">
+                                <div class="form-group col-12">
+                                    <lable style="font-size: 40px;">Rs.</lable>
+                                    <lable style="font-size: 40px;">1500.00</lable>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row p-0 mt-2" align="right">
+                        <div class="form-group col-12">
+                            <button type="button" class="btn btn-success">Place Order</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-xl-6">
-            <table class="table table-hover border mt-1">
-                <thead class="" style="background: #9370DB">
-                <tr>
-                    <th scope="col">Item Code</th>
-                    <th scope="col">Item Name</th>
-                    <th scope="col">Unit Price</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Total</th>
-                </tr>
-                </thead>
-                <tbody class="" style="background: white">
-                <tr>
-                    <th scope="row">1</th>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                    <td>...</td>
-                </tbody>
-            </table>
-            <div class="row p-0 mt-1" align="right">
-                <div class="form-group col-12">
-                    <button type="button" class="btn btn-success">Clear</button>
-                    <button type="button" class="btn btn-success">Clear List</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 p-2">
-            <div class="bg-white card">
-                <div class="card-header text-white" style="font-size: 23px; background: #2E8B57">
-                    Manage Payments
-                </div>
-                <div class="card-body bg-white text-dark ">
-                    <div class="row p-0 mt-1">
-                        <div class="form-group col-12">
-                            <lable>Cash</lable>
-                            <input type="number" id="txtCash" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row p-0 mt-1">
-                        <div class="form-group col-12">
-                            <lable>Discount</lable>
-                            <input type="number" id="txtDiscount" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row p-0 mt-1">
-                        <div class="form-group col-12">
-                            <lable>Balance</lable>
-                            <input type="number" id="txtBalance" class="form-control">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 p-2">
-            <div class="bg-white card">
-                <div class="card-header text-white" style="font-size: 23px; background: #2E8B57">
-                    Sub Total
-                </div>
-                <div class="card-body bg-white text-dark ">
-                    <div class="row p-0 mt-1">
-                        <div class="form-group col-12">
-                            <lable style="font-size: 40px;">Rs.</lable>
-                            <lable style="font-size: 40px;">1500.00</lable>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row p-0 mt-2" align="right">
-                <div class="form-group col-12">
-                    <button type="button" class="btn btn-success">Place Order</button>
-                </div>
-            </div>
-        </div>
-
     </div>
 </div>
+
+            <!-- /#page-content-wrapper -->
+            <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script>
+                var el = document.getElementById("wrapper");
+                var toggleButton = document.getElementById("menu-toggle");
+
+                toggleButton.onclick = function () {
+                    el.classList.toggle("toggled");
+                };
+            </script>
 </body>
 </html>
