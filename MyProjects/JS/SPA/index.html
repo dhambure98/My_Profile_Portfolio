@@ -13,9 +13,378 @@
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <title>Home | POS System</title>
 </head>
+
 <body>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-white" id="sidebar-wrapper">
+        <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i
+                class="fas fa-user-secret me-2"></i>ADL System</div>
+        <div class="list-group list-group-flush my-3">
+            <a href="index.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                    class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
+            <a href="customer.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                    class="fas fa-project-diagram me-2"></i>Customer</a>
+            <a href="item.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                    class="fas fa-chart-line me-2"></i>Items</a>
+            <a href="orders.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                    class="fas fa-paperclip me-2"></i>Order</a>
+            <a href="order_details.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                    class="fas fa-shopping-cart me-2"></i>Order Details</a>
+            <a href="login.html" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
+                    class="fas fa-power-off me-2"></i>Logout</a>
+        </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- HomePage Content -->
+    <div id="page-content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+                <h2 class="fs-2 m-0">Dashboard</h2>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
+                           role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user me-2"></i>A D Liyanage
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid px-4">
+            <div class="row g-3 my-2">
+                <div class="col-md-3">
+                    <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                        <div>
+                            <h3 class="fs-2">120</h3>
+                            <p class="fs-5">Products</p>
+                        </div>
+                        <i class="fas fa-gift fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                        <div>
+                            <h3 class="fs-2">850</h3>
+                            <p class="fs-5">Sales</p>
+                        </div>
+                        <i
+                                class="fas fa-hand-holding-usd fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                        <div>
+                            <h3 class="fs-2">334</h3>
+                            <p class="fs-5">Delivery</p>
+                        </div>
+                        <i class="fas fa-truck fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                        <div>
+                            <h3 class="fs-2">%25</h3>
+                            <p class="fs-5">Increase</p>
+                        </div>
+                        <i class="fas fa-chart-line fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <h3 class="fs-4 mb-3">Recent Orders</h3>
+                <div class="col">
+                    <table class="table bg-white rounded shadow-sm  table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col" width="50">#</th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Customer</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Television</td>
+                            <td>Kamal</td>
+                            <td>Rs.12000.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Laptop</td>
+                            <td>Nimal</td>
+                            <td>Rs.75000.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Cell Phone</td>
+                            <td>Dilum</td>
+                            <td>Rs.60000.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Fridge</td>
+                            <td>Nimesha</td>
+                            <td>Rs.200000.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#page-content-wrapper -->
+
+<!--Customer Form-->
+<div class="container-fluid mt-3" id="customerform">
+<!--    <h1 class="mx-4">Customer Form</h1>-->
+    <div class="row mt-1 p-0">
+        <div class="col-xl-8 col-lg-6">
+
+            <table class="table table-hover border mt-1">
+                <thead class="" style="background: #9370DB">
+                <tr>
+                    <th scope="col">Customer ID</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Customer Address</th>
+                    <th scope="col">Customer Salary</th>
+                    <!-- <th scope="col">Customer Contact</th>
+                    <th scope="col">Date Of Birth</th>
+                    <th scope="col">Gender</th> -->
+                </tr>
+                </thead>
+                <tbody class="" style="background: white" id="tblCustomer">
+                <tr>
+
+                    <!-- <td>C001</td>
+                    <td>Abc</td>
+                    <td>Abc</td>
+                    <td>Abc</td>
+                    <td>Abc</td>
+                    <td>abc</td> -->
+                </tr>
+                <tr>
+
+                    <!-- <td>C002</td>
+                    <td>Abc</td>
+                    <td>Abc</td>
+                    <td>Abc</td>
+                    <td>Abc</td>
+                    <td>abc</td> -->
+                </tr>
+                <tr>
+                    <!-- <td>C003</td>
+                    <td>Abc</td>
+                    <td>Abc</td>
+                    <td>Abc</td>
+                    <td>Abc</td>
+                    <td>abc</td> -->
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xl-4">
+            <div class="bg-white card">
+                <div class="card-header text-white" style="font-size: 23px; background: #2E8B57">
+                    Manage Customers
+                </div>
+                <div class="card-body bg-white text-dark">
+                    <div class="row p-2 mt-1">
+                        <div class="form-group col-12">
+                            <lable>Customer ID</lable>
+                            <input type="text" id="txtCustomerId" class="form-control">
+                            <span class="control-error" id="lblcusid"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-0">
+                        <div class="form-group col-12">
+                            <lable>Customer Name</lable>
+                            <input type="text" id="txtCustomerName" class="form-control" >
+                            <span class="control-error" id="lblcusname"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-0">
+                        <div class="form-group col-12">
+                            <lable>Customer Address</lable>
+                            <input type="text" id="txtCustomerAddress" class="form-control" >
+                            <span class="control-error" id="lblcusaddress"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-0">
+                        <div class="form-group col-12">
+                            <lable>Customer Salary</lable>
+                            <input type="text" id="txtCustomerSalary" class="form-control" >
+                            <span class="control-error" id="lblcussalary"></span>
+                        </div>
+                    </div>
+                    <!-- <div class="row p-2 mt-0">
+                        <div class="form-group col-12">
+                            <lable>Customer Contact</lable>
+                            <input type="text" id="txtCustomerContact" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-0">
+                        <div class="form-group col-12">
+                        <label>Date Of Birth</label>
+                        <input  id="dateofbirth" class="form-control" type="date">
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-0">
+                        <div class="form-group col-12">
+                        <label>Gender</label>
+                        <select aria-label="Default select example" class="form-select" id="cmbGender">
+                            <option value=""></option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        </div>
+                    </div> -->
+                    <div class="row p-1 mt-5" align="right">
+                        <div class="form-group col-12">
+                            <button type="button" class="btn bg-success text-white fw-bold" id="btnCustomerAdd">Save</button>
+                            <button type="button" class="btn bg-warning text-white fw-bold" id="btnCustomerUpdate">Update</button>
+                            <button type="button" class="btn bg-danger text-white fw-bold" id="btnCustomerDelete">Delete</button>
+                            <!-- <button type="button" class="btn btn-outline-danger fw-bold">Cancel</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Item Form-->
+<div class="container-fluid mt-5" id="itemform">
+    <h1 class="mx-4">Item Form</h1>
+    <div class="row mt-1 p-0">
+        <div class="col-xl-8 col-lg-6">
+            <table class="table table-hover border mt-1" >
+                <thead class="" style="background: #9370DB">
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Name</th>
+                    <!-- <th scope="col">Discription</th> -->
+                    <th scope="col">In Stocks</th>
+                    <th scope="col">Unit Price</th>
+                </tr>
+                </thead>
+                <tbody class="" style="background: white" id="tblItem">
+                <tr>
+                    <!-- <td>I001</td>
+                    <td>abc</td>
+                    <td>abc</td>
+                    <td>200</td>
+                    <td>abc</td> -->
+                </tr>
+                <tr>
+                    <!-- <td>I002</td>
+                    <td>abc</td>
+                    <td>abc</td>
+                    <td>100</td>
+                    <td>abc</td> -->
+                </tr>
+                <tr>
+                    <!-- <td>I003</td>
+                    <td>abc</td>
+                    <td>abc</td>
+                    <td>300</td>
+                    <td>abc</td> -->
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xl-4">
+            <div class="bg-white card">
+                <div class="card-header text-white" style="font-size: 23px; background: #2E8B57">
+                    Manage Items
+                </div>
+                <div class="card-body bg-white text-dark">
+                    <div class="row p-2 mt-1">
+                        <div class="form-group col-12">
+                            <lable>Item Code</lable>
+                            <input type="text" id="txtItemCode" class="form-control">
+                            <span class="control-error" id="lblitemcode"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-0">
+                        <div class="form-group col-12">
+                            <lable>Item Name</lable>
+                            <input type="text" id="txtItemName" class="form-control" >
+                            <span class="control-error" id="lblitemname"></span>
+                        </div>
+                    </div>
+                    <!-- <div class="row p-2 mt-0">
+                        <div class="form-group col-12">
+                            <lable>Discription</lable>
+                            <textarea type="text" id="txtDiscription" class="form-control" ></textarea>
+                        </div>
+                    </div> -->
+                    <div class="row p-2 mt-0">
+                        <div class="form-group col-12">
+                            <lable>In Stocks</lable>
+                            <input type="number" id="txtQtyOnHand" class="form-control" >
+                            <span class="control-error" id="lblitemstock"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-0">
+                        <div class="form-group col-12">
+                            <lable>Unit Price</lable>
+                            <input type="text" id="txtUnitePrice" class="form-control" >
+                            <span class="control-error" id="lblitemprice"></span>
+                        </div>
+                    </div>
+                    <!-- <div class="row p-2 mt-0">
+                        <div class="col-12">
+                        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
+                        </div>
+                    </div> -->
+
+                    <div class="row p-1 mt-5" align="right">
+                        <div class="form-group col-12">
+                            <button type="button" class="btn bg-success text-white fw-bold" id="btnItemAdd">Save</button>
+                            <button type="button" class="btn bg-warning text-white fw-bold" id="btnItemUpdate">Update</button>
+                            <button type="button" class="btn bg-danger text-white fw-bold" id="btnItemDelete">Delete</button>
+                            <!-- <button type="button" class="btn btn-outline-danger fw-bold">Cancel</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--JavaScript DOM Lines -->
+<script src="assets/js/script.js"></script>
 
 </body>
 </html>
