@@ -381,7 +381,237 @@
     </div>
 </div>
 
+<!-- order form -->
+<div class="container-fluid mt-5" id="orderform">
+    <h1 class="mx-4">Order Form</h1>
+    <div class="row mt-1 p-0">
+        <div class="col-xl-6">
+            <div class="bg-white card">
+                <div class="card-header text-white" style="font-size: 23px; background: #2E8B57">
+                    Manage Orders
+                </div>
+                <div class="card-body bg-white text-dark">
+                    <div class="row p-0 mt-1">
+                        <div class="form-group col-6">
+                            <lable>Order ID</lable>
+                            <input type="text" id="txtOrderId" class="form-control">
+                        </div>
+                        <div class="form-group col-6">
+                            <lable>Date</lable>
+                            <input type="" id="txtDate" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="row p-0 mt-1">
+                        <!-- <div class="form-group col-4">
+                            <label>Customer ID</label>
+                            <select aria-label="Default select example" class="form-select" id="cmbCustomerID">
+                                <option value="0"></option>
+                                <option value="1">C001</option>
+                                <option value="2">C002</option>
+                                <option value="3">C003</option>
+                                <option value="4">C004</option>
+                            </select>
+                            </div> -->
+                        <div class="form-group col-4">
+                            <lable>Customer ID</lable>
+                            <input type="text" class="form-control" id="txtCustomerID">
+                        </div>
+                        <div class="form-group col-8">
+                            <lable>Customer Name</lable>
+                            <input type="text" id="txtCustomerName2" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="row p-0 mt-1">
+                        <!-- <div class="form-group col-4">
+                            <label>Item Code</label>
+                            <select aria-label="Default select example" class="form-select" id="cmbItemCode">
+                                <option value="0"></option>
+                                <option value="1">I001</option>
+                                <option value="2">I002</option>
+                                <option value="3">I003</option>
+                                <option value="4">I004</option>
+                            </select>
+                            </div> -->
+                        <div class="form-group col-4">
+                            <lable>Item Code</lable>
+                            <input type="text"  class="form-control" id="txtItemCode2">
+                        </div>
+                        <div class="form-group col-8">
+                            <lable>Item Name</lable>
+                            <input type="text"  class="form-control" id="txtItemName2" >
+                        </div>
+                    </div>
+                    <div class="row p-0 mt-1">
+                        <div class="form-group col-6">
+                            <lable>In Stocks</lable>
+                            <input type="number" id="txtInStocks2" class="form-control">
+                        </div>
+                        <div class="form-group col-6">
+                            <lable>Unit Price</lable>
+                            <input type="number" id="txtUnitPrice2" class="form-control" >
+                        </div>
+                        <div class="form-group col-6">
+                            <lable>Quantity</lable>
+                            <input type="number" id="txtQuantity" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row p-0 mt-1" align="right">
+                        <div class="form-group col-12">
+                            <button type="button" class="btn bg-warning text-white fw-bold" id="btnAddToList">Add To List</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6">
+            <table class="table table-hover border mt-1">
+                <thead class="" style="background: #9370DB">
+                <tr>
+                    <th scope="col">Item Code</th>z
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Unit Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                </tr>
+                </thead>
+                <tbody class="" style="background: white" id="tblLIst" >
+                <tr>
+                    <!-- <th scope="row">1</th>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td> -->
+                </tr>
+                <tr>
+                    <!-- <th scope="row">2</th>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td> -->
+                </tr>
 
+                </tbody>
+            </table>
+            <div class="row p-0 mt-1" align="right">
+                <div class="form-group col-12">
+                    <button type="button" class="btn btn-success" id="btnClear">Clear</button>
+                    <button type="button" class="btn btn-success" id="btnClearAll">Clear List</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 p-2">
+            <div class="bg-white card">
+                <div class="card-header text-white" style="font-size: 23px; background: #2E8B57">
+                    Manage Payments
+                </div>
+                <div class="card-body bg-white text-dark ">
+                    <div class="row p-0 mt-1">
+                        <div class="form-group col-12">
+                            <lable>Cash</lable>
+                            <input type="number" id="txtCash" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row p-0 mt-1">
+                        <div class="form-group col-12">
+                            <lable>Discount</lable>
+                            <input type="number" id="txtDiscount" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row p-0 mt-1">
+                        <div class="form-group col-12">
+                            <lable>Balance</lable>
+                            <input type="" id="txtBalance" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 p-2">
+            <div class="bg-white card">
+                <div class="card-header text-white" style="font-size: 23px; background: #2E8B57">
+                    Sub Total
+                </div>
+                <div class="card-body bg-white text-dark ">
+                    <div class="row p-0 mt-1">
+                        <div class="form-group col-12">
+                            <lable style="font-size: 40px;">Rs.</lable>
+                            <lable style="font-size: 40px;" id="subTotal"></lable>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-0 mt-2" align="right">
+                <div class="form-group col-12">
+                    <button type="button" class="btn btn-success" id="btnPlaceOrder">Place Order</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- order_details form -->
+<div class="container-fluid mt-5" id="order_detailsform">
+    <h1 class="mx-4">Orders</h1>
+    <div class="row mt-1 p-0" >
+        <div class="col-6" style="align-content: center;">
+            <table class="table table-hover border mt-1">
+                <thead class="" style="background: #9370DB">
+                <tr>
+                    <th scope="col">Order ID</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Customer ID</th>
+
+                </tr>
+                </thead>
+                <tbody class="" style="background: white" id="tblOrders">
+                <tr>
+                    <!-- <th scope="row">1</th>
+                    <td>...</td>
+                    <td>...</td> -->
+                </tr>
+                <tr>
+                    <!-- <th scope="row">2</th>
+                    <td>...</td>
+                    <td>...</td>-->
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <!-- <div class="col-8">
+            <table class="table table-hover border mt-1">
+                <thead class="" style="background: #9370DB">
+                <tr>
+                    <th scope="col">Order ID</th>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Unit Price</th>
+                    <th scope="col">Quantity</th>
+                </tr>
+                </thead>
+                <tbody class="" style="background: white" id="tblOrderDetails">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                     <th scope="row">2</th>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div> -->
+    </div>
+</div>
 
 <!--JavaScript DOM Lines -->
 <script src="assets/js/script.js"></script>
