@@ -1,0 +1,159 @@
+<!--/**
+* @author : A.D.Liyanage
+* @since : 0.1.0
+**/-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js-Query</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
+    <style>
+
+        body{
+            background-color: black;
+        }
+
+        body>div{
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            border-radius: 15px;
+        }
+
+        /*----Rectangles-----*/
+
+        body>div:nth-child(1){
+            background-color: gold;
+            top: 15vh;
+            left: 6vw;
+        }
+
+        body>div:nth-child(2){
+            background-color: #0652DD;
+            top: 43vh;
+            left: 21vw;
+        }
+
+        body>div:nth-child(3){
+            background-color: #7f8fa6;
+            top: 43vh;
+            left: 36vw;
+        }
+
+        body>div:nth-child(4){
+            background-color: #4cd137;
+            top: 43vh;
+            right: 36vw;
+        }
+
+        body>div:nth-child(5){
+            background-color: #40739e;
+            top: 43vh;
+            right: 21vw;
+        }
+
+        body>div:nth-child(6){
+            background-color: #eb2f06;
+            bottom: 15vh;
+            right: 6vw;
+        }
+
+        /*-------------------*/
+
+        body>section{
+            position: absolute;
+            width: 88vw;
+            height: 3px;
+            background-color: white;
+        }
+
+        body>section:nth-child(7){
+            left: 6vw;
+            top: 35vh;
+        }
+
+        body>section:nth-child(8){
+            left: 6vw;
+            bottom: 35vh;
+        }
+
+
+        body>button{
+            position: absolute;
+            border: 3px solid #4cd137;
+            border-radius: 10px;
+            width: 100px;
+            height: 50px;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+        }
+
+        #btnStart{
+            left: 43vw;
+            top: 2vh;
+        }
+
+        #btnStop{
+            left: 51vw;
+            top: 2vh;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+<div id="d1"></div>
+<div id="d2"></div>
+<div id="d3"></div>
+<div id="d4"></div>
+<div id="d5"></div>
+<div id="d6"></div>
+
+<section></section>
+<section></section>
+
+<button id="btnStart">Start</button>
+<button id="btnStop">Stop</button>
+
+<script src="assets/jquery/jquery-3.6.0.min.js"></script>
+
+<script>
+
+    function changeColour(){
+
+        let d1 = $("#d1").css('background-color');
+        let d2 = $("#d2").css('background-color');
+        let d3 = $("#d3").css('background-color');
+        let d4 = $("#d4").css('background-color');
+        let d5 = $("#d5").css('background-color');
+        let d6 = $("#d6").css('background-color');
+
+
+        $("#d1").css('background-color',d6);
+        $("#d2").css('background-color',d1);
+        $("#d3").css('background-color',d2);
+        $("#d4").css('background-color',d3);
+        $("#d5").css('background-color',d4);
+        $("#d6").css('background-color',d5);
+
+    }
+
+    $("#btnStart").click(function (){
+        interval = setInterval(changeColour,1200);
+    });
+
+    $("#btnStop").click(function (){
+        clearInterval(interval);
+    });
+
+</script>
+
+</body>
+</html>
