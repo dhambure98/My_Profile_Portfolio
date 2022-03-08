@@ -1,0 +1,40 @@
+<!--/**
+* @author : Akila Liyanage
+* @since : 0.1.0
+**/-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Events</title>
+    <style>
+        div {
+            background: red;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body id="body">
+<h1 id="hello">Hello IJSE...!</h1>
+<div id="firstDiv">
+
+</div>
+
+
+<script src="assets/jquery/jquery-3.6.0.min.js"></script>
+<script>
+
+    $(window).mousemove(function (event) {
+        var x=event.pageX;
+        var y=event.pageY;
+        $("#hello").css('position','absolute');
+        $("#hello").css('left',x);
+        $("#hello").css('top',y);
+
+    });
+
+</script>
+</body>
+</html>
