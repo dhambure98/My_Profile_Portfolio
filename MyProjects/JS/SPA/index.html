@@ -223,107 +223,67 @@
 </section>
 <!-- Customer Content End-->
 
-<!--Item Form-->
-<div class="container-fluid mt-5" id="itemform">
-    <h1 class="mx-4">Item Form</h1>
-    <div class="row mt-1 p-0">
-        <div class="col-xl-8 col-lg-6">
-            <table class="table table-hover border mt-1" >
-                <thead class="" style="background: #9370DB">
-                <tr>
-                    <th scope="col">Item Code</th>
-                    <th scope="col">Item Name</th>
-                    <!-- <th scope="col">Discription</th> -->
-                    <th scope="col">In Stocks</th>
-                    <th scope="col">Unit Price</th>
-                </tr>
-                </thead>
-                <tbody class="" style="background: white" id="tblItem">
-                <tr>
-                    <!-- <td>I001</td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>200</td>
-                    <td>abc</td> -->
-                </tr>
-                <tr>
-                    <!-- <td>I002</td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>100</td>
-                    <td>abc</td> -->
-                </tr>
-                <tr>
-                    <!-- <td>I003</td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>300</td>
-                    <td>abc</td> -->
-                </tr>
-
-                </tbody>
-            </table>
-        </div>
-        <div class="col-xl-4">
-            <div class="bg-white card">
-                <div class="card-header text-white" style="font-size: 23px; background: #2E8B57">
-                    Manage Items
+<!-- Item Content Start-->
+<section class="container-fluid mt-3">
+    <section class="row mt-3 justify-content-around">
+        <div class="col-12 col-md-4">
+            <div class="shadow-sm pt-3 pb-5 px-3 py-3 mt-2">
+                <h1 class="h1 mb-3">Item Manage</h1>
+                <div class="mb-3">
+                    <label class="form-label" for="srcCusID">Search Item</label>
+                    <input class="form-control" id="srcCusID" placeholder="Item Code" type="text">
                 </div>
-                <div class="card-body bg-white text-dark">
-                    <div class="row p-2 mt-1">
-                        <div class="form-group col-12">
-                            <lable>Item Code</lable>
-                            <input type="text" id="txtItemCode" class="form-control">
-                            <span class="control-error" id="lblitemcode"></span>
-                        </div>
-                    </div>
-                    <div class="row p-2 mt-0">
-                        <div class="form-group col-12">
-                            <lable>Item Name</lable>
-                            <input type="text" id="txtItemName" class="form-control" >
-                            <span class="control-error" id="lblitemname"></span>
-                        </div>
-                    </div>
-                    <!-- <div class="row p-2 mt-0">
-                        <div class="form-group col-12">
-                            <lable>Discription</lable>
-                            <textarea type="text" id="txtDiscription" class="form-control" ></textarea>
-                        </div>
-                    </div> -->
-                    <div class="row p-2 mt-0">
-                        <div class="form-group col-12">
-                            <lable>In Stocks</lable>
-                            <input type="number" id="txtQtyOnHand" class="form-control" >
-                            <span class="control-error" id="lblitemstock"></span>
-                        </div>
-                    </div>
-                    <div class="row p-2 mt-0">
-                        <div class="form-group col-12">
-                            <lable>Unit Price</lable>
-                            <input type="text" id="txtUnitePrice" class="form-control" >
-                            <span class="control-error" id="lblitemprice"></span>
-                        </div>
-                    </div>
-                    <!-- <div class="row p-2 mt-0">
-                        <div class="col-12">
-                        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
-                        </div>
-                    </div> -->
+                <button class="btn btn-primary">Search</button>
 
-                    <div class="row p-1 mt-5" align="right">
-                        <div class="form-group col-12">
-                            <button type="button" class="btn bg-success text-white fw-bold" id="btnItemAdd">Save</button>
-                            <button type="button" class="btn bg-warning text-white fw-bold" id="btnItemUpdate">Update</button>
-                            <button type="button" class="btn bg-danger text-white fw-bold" id="btnItemDelete">Delete</button>
-                            <!-- <button type="button" class="btn btn-outline-danger fw-bold">Cancel</button> -->
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
-    </div>
-</div>
+        <div class="col-12 col-md-5">
+            <div class="mb-3">
+                <label class="form-label" for="txtItemCode">Item Code</label>
+                <input class="form-control" id="txtItemCode" placeholder="Item Code" type="text">
+                <p><small class="text-danger pl-1" id="lblItemCode"></small></p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtItemName">Item Name</label>
+                <input class="form-control" id="txtItemName" placeholder="Item Name" type="text">
+                <p><small class="text-danger pl-1" id="lblItemName"></small></p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtItemQty">Item Qty</label>
+                <input class="form-control" id="txtItemQty" placeholder="Item Qty" type="text">
+                <p><small class="text-danger pl-1" id="lblItemQty"></small></p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtItemPrice">Item Price</label>
+                <input class="form-control" id="txtItemPrice" placeholder="Item Price" type="text">
+                <p><small class="text-danger pl-1" id="lblItemPrice"></small></p>
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary me-md-2" id="btnSaveItem">Save</button>
+                <button class="btn btn-success me-md-2" id="btnUpdateItem">Update</button>
+                <button class="btn btn-danger me-md-2" id="btnDeleteCItem">Delete</button>
+            </div>
+
+        </div>
+    </section>
+    <section class="row mt-4">
+        <div class="col">
+            <table class="table table-hover">
+                <thead class="bg-danger text-white">
+                <tr>
+                    <th>Item Code</th>
+                    <th>Item Name</th>
+                    <th>Item Qty</th>
+                    <th>Item Price</th>
+                </tr>
+                </thead>
+                <tbody id="itemTable"></tbody>
+            </table>
+        </div>
+    </section>
+</section>
+<!-- Item Content End-->
 
 <!-- order form -->
 <div class="container-fluid mt-5" id="orderform">
