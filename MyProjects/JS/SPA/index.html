@@ -22,7 +22,7 @@
     <!-- Sidebar -->
     <div class="bg-white" id="sidebar-wrapper">
         <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i
-                class="fas fa-user-secret me-2"></i>ADL System</div>
+                class="fas fa-user-secret me-2"></i>Double Eat Store</div>
         <div class="list-group list-group-flush my-3">
             <a href="index.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
                     class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
@@ -161,123 +161,67 @@
 </div>
 <!-- /#page-content-wrapper -->
 
-<!--Customer Form-->
-<div class="container-fluid mt-3" id="customerform">
-<!--    <h1 class="mx-4">Customer Form</h1>-->
-    <div class="row mt-1 p-0">
-        <div class="col-xl-8 col-lg-6">
-
-            <table class="table table-hover border mt-1">
-                <thead class="" style="background: #9370DB">
-                <tr>
-                    <th scope="col">Customer ID</th>
-                    <th scope="col">Customer Name</th>
-                    <th scope="col">Customer Address</th>
-                    <th scope="col">Customer Salary</th>
-                    <!-- <th scope="col">Customer Contact</th>
-                    <th scope="col">Date Of Birth</th>
-                    <th scope="col">Gender</th> -->
-                </tr>
-                </thead>
-                <tbody class="" style="background: white" id="tblCustomer">
-                <tr>
-
-                    <!-- <td>C001</td>
-                    <td>Abc</td>
-                    <td>Abc</td>
-                    <td>Abc</td>
-                    <td>Abc</td>
-                    <td>abc</td> -->
-                </tr>
-                <tr>
-
-                    <!-- <td>C002</td>
-                    <td>Abc</td>
-                    <td>Abc</td>
-                    <td>Abc</td>
-                    <td>Abc</td>
-                    <td>abc</td> -->
-                </tr>
-                <tr>
-                    <!-- <td>C003</td>
-                    <td>Abc</td>
-                    <td>Abc</td>
-                    <td>Abc</td>
-                    <td>Abc</td>
-                    <td>abc</td> -->
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-xl-4">
-            <div class="bg-white card">
-                <div class="card-header text-white" style="font-size: 23px; background: #2E8B57">
-                    Manage Customers
+<!-- Customer Content Start-->
+<section class="container-fluid mt-3">
+    <section class="row mt-3 justify-content-around">
+        <div class="col-12 col-md-4">
+            <div class="shadow-sm pt-3 pb-5 px-3 py-3 mt-2">
+                <h1 class="h1 mb-3">Customer Manage</h1>
+                <div class="mb-3">
+                    <label class="form-label" for="txtSearchCusID">Search Customer</label>
+                    <input class="form-control" id="txtSearchCusID" placeholder="Customer ID, NIC, Name" type="text">
                 </div>
-                <div class="card-body bg-white text-dark">
-                    <div class="row p-2 mt-1">
-                        <div class="form-group col-12">
-                            <lable>Customer ID</lable>
-                            <input type="text" id="txtCustomerId" class="form-control">
-                            <span class="control-error" id="lblcusid"></span>
-                        </div>
-                    </div>
-                    <div class="row p-2 mt-0">
-                        <div class="form-group col-12">
-                            <lable>Customer Name</lable>
-                            <input type="text" id="txtCustomerName" class="form-control" >
-                            <span class="control-error" id="lblcusname"></span>
-                        </div>
-                    </div>
-                    <div class="row p-2 mt-0">
-                        <div class="form-group col-12">
-                            <lable>Customer Address</lable>
-                            <input type="text" id="txtCustomerAddress" class="form-control" >
-                            <span class="control-error" id="lblcusaddress"></span>
-                        </div>
-                    </div>
-                    <div class="row p-2 mt-0">
-                        <div class="form-group col-12">
-                            <lable>Customer Salary</lable>
-                            <input type="text" id="txtCustomerSalary" class="form-control" >
-                            <span class="control-error" id="lblcussalary"></span>
-                        </div>
-                    </div>
-                    <!-- <div class="row p-2 mt-0">
-                        <div class="form-group col-12">
-                            <lable>Customer Contact</lable>
-                            <input type="text" id="txtCustomerContact" class="form-control" >
-                        </div>
-                    </div>
-                    <div class="row p-2 mt-0">
-                        <div class="form-group col-12">
-                        <label>Date Of Birth</label>
-                        <input  id="dateofbirth" class="form-control" type="date">
-                        </div>
-                    </div>
-                    <div class="row p-2 mt-0">
-                        <div class="form-group col-12">
-                        <label>Gender</label>
-                        <select aria-label="Default select example" class="form-select" id="cmbGender">
-                            <option value=""></option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                        </select>
-                        </div>
-                    </div> -->
-                    <div class="row p-1 mt-5" align="right">
-                        <div class="form-group col-12">
-                            <button type="button" class="btn bg-success text-white fw-bold" id="btnCustomerAdd">Save</button>
-                            <button type="button" class="btn bg-warning text-white fw-bold" id="btnCustomerUpdate">Update</button>
-                            <button type="button" class="btn bg-danger text-white fw-bold" id="btnCustomerDelete">Delete</button>
-                            <!-- <button type="button" class="btn btn-outline-danger fw-bold">Cancel</button> -->
-                        </div>
-                    </div>
-                </div>
+                <button class="btn btn-primary" id="btnSearch">Search</button>
+
             </div>
         </div>
-    </div>
-</div>
+        <div class="col-12 col-md-5">
+            <div class="mb-3">
+                <label class="form-label" for="txtCusID">Customer ID</label>
+                <input class="form-control" id="txtCusID" placeholder="Customer ID" type="text">
+                <p><small class="text-danger pl-1" id="lblCusId"></small></p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtCusName">Customer Name</label>
+                <input class="form-control" id="txtCusName" placeholder="Customer Name" type="text">
+                <p><small class="text-danger pl-1" id="lblCusName"></small></p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtCusAddress">Customer Address</label>
+                <input class="form-control" id="txtCusAddress" placeholder="Customer Address" type="text">
+                <p><small class="text-danger pl-1" id="lblCusAddress"></small></p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtCusTp">Customer Tp</label>
+                <input class="form-control" id="txtCusTp" placeholder="Customer Tp" type="text">
+                <p><small class="text-danger pl-1" id="lblCusTp"></small></p>
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary me-md-2" id="btnSaveCustomer">Save</button>
+                <button class="btn btn-success me-md-2" id="btnUpdateCustomer">Update</button>
+                <button class="btn btn-danger me-md-2">Delete</button>
+            </div>
+
+        </div>
+    </section>
+    <section class="row mt-4">
+        <div class="col">
+            <table class="table table-hover">
+                <thead class="bg-danger text-white">
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Customer Name</th>
+                    <th>Customer Address</th>
+                    <th>Customer Tp</th>
+                </tr>
+                </thead>
+                <tbody id="customerTable"></tbody>
+            </table>
+        </div>
+    </section>
+</section>
+<!-- Customer Content End-->
 
 <!--Item Form-->
 <div class="container-fluid mt-5" id="itemform">
