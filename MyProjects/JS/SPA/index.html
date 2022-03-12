@@ -22,18 +22,17 @@
     <!-- Sidebar -->
     <div class="bg-white" id="sidebar-wrapper">
         <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i
-                class="fas fa-user-secret me-2"></i>Double Eat Store</div>
+                class="fas fa-user-secret me-2"></i>Eat Store</div>
         <div class="list-group list-group-flush my-3">
-            <a href="index.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+            <a id="dashboard" href="index.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
                     class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
-            <a href="customer.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+            <a id="customer" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                     class="fas fa-project-diagram me-2"></i>Customer</a>
-            <a href="item.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+            <a id="items" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                     class="fas fa-chart-line me-2"></i>Items</a>
-            <a href="orders.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+            <a id="order" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                     class="fas fa-paperclip me-2"></i>Order</a>
-            <a href="order_details.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
-                    class="fas fa-shopping-cart me-2"></i>Order Details</a>
+            <a id="odetails" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-shopping-cart me-2"></i>Order Details</a>
             <a href="login.html" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
                     class="fas fa-power-off me-2"></i>Logout</a>
         </div>
@@ -41,7 +40,7 @@
     <!-- /#sidebar-wrapper -->
 
     <!-- HomePage Content -->
-    <div id="page-content-wrapper">
+    <div id="page-content-wrapper" class="">
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
             <div class="d-flex align-items-center">
                 <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
@@ -162,69 +161,100 @@
 <!-- /#page-content-wrapper -->
 
 <!-- Customer Content Start-->
-<section class="container-fluid mt-3">
-    <section class="row mt-3 justify-content-around">
-        <div class="col-12 col-md-4">
-            <div class="shadow-sm pt-3 pb-5 px-3 py-3 mt-2">
-                <h1 class="h1 mb-3">Customer Manage</h1>
-                <div class="mb-3">
-                    <label class="form-label" for="txtSearchCusID">Search Customer</label>
-                    <input class="form-control" id="txtSearchCusID" placeholder="Customer ID, NIC, Name" type="text">
+<section class="container-fluid mt-3 d-none" id="2">
+
+    <!-- HomePage Content -->
+    <div id="page-content-wrapper" class="">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+                <h2 class="fs-2 m-0">Dashboard</h2>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
+                           role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user me-2"></i>A D Liyanage
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="row mt-3 justify-content-around">
+            <div class="col-12 col-md-4">
+                <div class="shadow-sm pt-3 pb-5 px-3 py-3 mt-2">
+                    <h1 class="h1 mb-3">Customer Manage</h1>
+                    <div class="mb-3">
+                        <label class="form-label" for="txtSearchCusID">Search Customer</label>
+                        <input class="form-control" id="txtSearchCusID" placeholder="Customer ID, NIC, Name" type="text">
+                    </div>
+                    <button class="btn btn-primary" id="btnSearch">Search</button>
+
                 </div>
-                <button class="btn btn-primary" id="btnSearch">Search</button>
+            </div>
+            <div class="col-12 col-md-5">
+                <div class="mb-3">
+                    <label class="form-label" for="txtCusID">Customer ID</label>
+                    <input class="form-control" id="txtCusID" placeholder="Customer ID" type="text">
+                    <p><small class="text-danger pl-1" id="lblCusId"></small></p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="txtCusName">Customer Name</label>
+                    <input class="form-control" id="txtCusName" placeholder="Customer Name" type="text">
+                    <p><small class="text-danger pl-1" id="lblCusName"></small></p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="txtCusAddress">Customer Address</label>
+                    <input class="form-control" id="txtCusAddress" placeholder="Customer Address" type="text">
+                    <p><small class="text-danger pl-1" id="lblCusAddress"></small></p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="txtCusTp">Customer Tp</label>
+                    <input class="form-control" id="txtCusTp" placeholder="Customer Tp" type="text">
+                    <p><small class="text-danger pl-1" id="lblCusTp"></small></p>
+                </div>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-primary me-md-2" id="btnSaveCustomer">Save</button>
+                    <button class="btn btn-success me-md-2" id="btnUpdateCustomer">Update</button>
+                    <button class="btn btn-danger me-md-2">Delete</button>
+                </div>
 
             </div>
-        </div>
-        <div class="col-12 col-md-5">
-            <div class="mb-3">
-                <label class="form-label" for="txtCusID">Customer ID</label>
-                <input class="form-control" id="txtCusID" placeholder="Customer ID" type="text">
-                <p><small class="text-danger pl-1" id="lblCusId"></small></p>
+        </section>
+        <section class="row mt-4">
+            <div class="col">
+                <table class="table table-hover">
+                    <thead class="bg-danger text-white">
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Customer Name</th>
+                        <th>Customer Address</th>
+                        <th>Customer Tp</th>
+                    </tr>
+                    </thead>
+                    <tbody id="customerTable"></tbody>
+                </table>
             </div>
-            <div class="mb-3">
-                <label class="form-label" for="txtCusName">Customer Name</label>
-                <input class="form-control" id="txtCusName" placeholder="Customer Name" type="text">
-                <p><small class="text-danger pl-1" id="lblCusName"></small></p>
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="txtCusAddress">Customer Address</label>
-                <input class="form-control" id="txtCusAddress" placeholder="Customer Address" type="text">
-                <p><small class="text-danger pl-1" id="lblCusAddress"></small></p>
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="txtCusTp">Customer Tp</label>
-                <input class="form-control" id="txtCusTp" placeholder="Customer Tp" type="text">
-                <p><small class="text-danger pl-1" id="lblCusTp"></small></p>
-            </div>
-
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-primary me-md-2" id="btnSaveCustomer">Save</button>
-                <button class="btn btn-success me-md-2" id="btnUpdateCustomer">Update</button>
-                <button class="btn btn-danger me-md-2">Delete</button>
-            </div>
-
-        </div>
-    </section>
-    <section class="row mt-4">
-        <div class="col">
-            <table class="table table-hover">
-                <thead class="bg-danger text-white">
-                <tr>
-                    <th>Customer ID</th>
-                    <th>Customer Name</th>
-                    <th>Customer Address</th>
-                    <th>Customer Tp</th>
-                </tr>
-                </thead>
-                <tbody id="customerTable"></tbody>
-            </table>
-        </div>
-    </section>
-</section>
+        </section>
 <!-- Customer Content End-->
 
 <!-- Item Content Start-->
-<section class="container-fluid mt-3">
+<section class="container-fluid mt-3 d-none" id="3">
     <section class="row mt-3 justify-content-around">
         <div class="col-12 col-md-4">
             <div class="shadow-sm pt-3 pb-5 px-3 py-3 mt-2">
@@ -286,7 +316,7 @@
 <!-- Item Content End-->
 
 <!-- order form -->
-<div class="container-fluid mt-5" id="orderform">
+<div class="container-fluid mt-5 d-none" id="orderform">
     <h1 class="mx-4">Order Form</h1>
     <div class="row mt-1 p-0">
         <div class="col-xl-6">
@@ -455,7 +485,7 @@
 </div>
 
 <!-- order_details form -->
-<div class="container-fluid mt-5" id="order_detailsform">
+<div class="container-fluid mt-5 d-none" id="order_detailsform">
     <h1 class="mx-4">Orders</h1>
     <div class="row mt-1 p-0" >
         <div class="col-6" style="align-content: center;">
@@ -523,6 +553,73 @@
 <script src="db/DB.js"></script>
 <script src="controller/CustomerController.js"></script>
 
+<!-- /#page-content-wrapper -->
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+    var el = document.getElementById("wrapper");
+    var toggleButton = document.getElementById("menu-toggle");
+
+    toggleButton.onclick = function () {
+        el.classList.toggle("toggled");
+    };
+    const dashboard = document.getElementById("page-content-wrapper");
+    const customer = document.getElementById("2");
+    const items = document.getElementById("3");
+    const order = document.getElementById("orderform");
+    const orderdetails = document.getElementById("order_detailsform");
+
+    const dashboardbtn = document.getElementById("dashboard");
+    const customerbtn = document.getElementById("customer");
+    const itemsbtn = document.getElementById("items");
+    const orderbtn = document.getElementById("order");
+    const odetailsbtn = document.getElementById("odetails");
+
+    dashboardbtn.addEventListener("click", ()=>{
+        if(dashboard.classList.contains("d-none")){
+            dashboard.classList.remove("d-none")
+            items.classList.add("d-none")
+            customer.classList.add("d-none")
+            order.classList.add("d-none")
+            orderdetails.classList.add("d-none")
+        }
+    });
+    customerbtn.addEventListener("click", () => {
+        if (customer.classList.contains("d-none")) {
+            dashboard.classList.add("d-none")
+            items.classList.add("d-none")
+            customer.classList.remove("d-none")
+            order.classList.add("d-none")
+            orderdetails.classList.add("d-none")
+        }
+    });
+    itemsbtn.addEventListener("click", () => {
+        if (items.classList.contains("d-none")) {
+            dashboard.classList.add("d-none")
+            items.classList.remove("d-none")
+            customer.classList.add("d-none")
+            order.classList.add("d-none")
+            orderdetails.classList.add("d-none")
+        }
+    });
+    orderbtn.addEventListener("click", () => {
+        if (order.classList.contains("d-none")) {
+            dashboard.classList.add("d-none")
+            items.classList.add("d-none")
+            customer.classList.add("d-none")
+            order.classList.remove("d-none")
+            orderdetails.classList.add("d-none")
+        }
+    });
+    odetailsbtn.addEventListener("click", () => {
+        if (orderdetails.classList.contains("d-none")) {
+            dashboard.classList.add("d-none")
+            items.classList.add("d-none")
+            customer.classList.add("d-none")
+            order.classList.add("d-none")
+            orderdetails.classList.remove("d-none")
+        }
+    });
+</script>
 
 </body>
 </html>
