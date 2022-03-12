@@ -202,7 +202,7 @@
                         <label class="form-label" for="txtSearchCusID">Search Customer</label>
                         <input class="form-control" id="txtSearchCusID" placeholder="Customer ID, NIC, Name" type="text">
                     </div>
-                    <button class="btn btn-primary" id="btnSearch">Search</button>
+                    <button class="btn btn-primary" id="btnSearchCustomer">Search</button>
 
                 </div>
             </div>
@@ -231,7 +231,7 @@
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <button class="btn btn-primary me-md-2" id="btnSaveCustomer">Save</button>
                     <button class="btn btn-success me-md-2" id="btnUpdateCustomer">Update</button>
-                    <button class="btn btn-danger me-md-2">Delete</button>
+                    <button class="btn btn-danger me-md-2" id="btnDeleteCustomer">Delete</button>
                 </div>
 
             </div>
@@ -239,7 +239,7 @@
         <section class="row mt-4">
             <div class="col">
                 <table class="table table-hover">
-                    <thead class="bg-danger text-white">
+                    <thead class="bg-danger ">
                     <tr>
                         <th>Customer ID</th>
                         <th>Customer Name</th>
@@ -251,68 +251,101 @@
                 </table>
             </div>
         </section>
+    </section>
 <!-- Customer Content End-->
 
 <!-- Item Content Start-->
 <section class="container-fluid mt-3 d-none" id="3">
-    <section class="row mt-3 justify-content-around">
-        <div class="col-12 col-md-4">
-            <div class="shadow-sm pt-3 pb-5 px-3 py-3 mt-2">
-                <h1 class="h1 mb-3">Item Manage</h1>
-                <div class="mb-3">
-                    <label class="form-label" for="srcCusID">Search Item</label>
-                    <input class="form-control" id="srcCusID" placeholder="Item Code" type="text">
+
+    <!-- HomePage Content -->
+    <div id="page-content-wrapper" class="">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+                <h2 class="fs-2 m-0">Dashboard</h2>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
+                           role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user me-2"></i>A D Liyanage
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="row mt-3 justify-content-around">
+            <div class="col-12 col-md-4">
+                <div class="shadow-sm pt-3 pb-5 px-3 py-3 mt-2">
+                    <h1 class="h1 mb-3">Item Manage</h1>
+                    <div class="mb-3">
+                        <label class="form-label" for="txtSearchItemID">Search Item</label>
+                        <input class="form-control" id="txtSearchItemID" placeholder="Item Code" type="text">
+                    </div>
+                    <button class="btn btn-primary" id="btnSearchItem">Search</button>
+
                 </div>
-                <button class="btn btn-primary">Search</button>
+            </div>
+            <div class="col-12 col-md-5">
+                <div class="mb-3">
+                    <label class="form-label" for="txtItemCode">Item Code</label>
+                    <input class="form-control" id="txtItemCode" placeholder="Item Code" type="text">
+                    <p><small class="text-danger pl-1" id="lblItemCode"></small></p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="txtItemName">Item Name</label>
+                    <input class="form-control" id="txtItemName" placeholder="Item Name" type="text">
+                    <p><small class="text-danger pl-1" id="lblItemName"></small></p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="txtItemQty">Item Qty</label>
+                    <input class="form-control" id="txtItemQty" placeholder="Item Qty" type="text">
+                    <p><small class="text-danger pl-1" id="lblItemQty"></small></p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="txtItemPrice">Item Price</label>
+                    <input class="form-control" id="txtItemPrice" placeholder="Item Price" type="text">
+                    <p><small class="text-danger pl-1" id="lblItemPrice"></small></p>
+                </div>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-primary me-md-2" id="btnSaveItem">Save</button>
+                    <button class="btn btn-success me-md-2" id="btnUpdateItem">Update</button>
+                    <button class="btn btn-danger me-md-2" id="btnDeleteItem">Delete</button>
+                </div>
 
             </div>
-        </div>
-        <div class="col-12 col-md-5">
-            <div class="mb-3">
-                <label class="form-label" for="txtItemCode">Item Code</label>
-                <input class="form-control" id="txtItemCode" placeholder="Item Code" type="text">
-                <p><small class="text-danger pl-1" id="lblItemCode"></small></p>
+        </section>
+        <section class="row mt-4">
+            <div class="col">
+                <table class="table table-hover">
+                    <thead class="bg-danger">
+                    <tr>
+                        <th>Item Code</th>
+                        <th>Item Name</th>
+                        <th>Item Qty</th>
+                        <th>Item Price</th>
+                    </tr>
+                    </thead>
+                    <tbody id="itemTable"></tbody>
+                </table>
             </div>
-            <div class="mb-3">
-                <label class="form-label" for="txtItemName">Item Name</label>
-                <input class="form-control" id="txtItemName" placeholder="Item Name" type="text">
-                <p><small class="text-danger pl-1" id="lblItemName"></small></p>
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="txtItemQty">Item Qty</label>
-                <input class="form-control" id="txtItemQty" placeholder="Item Qty" type="text">
-                <p><small class="text-danger pl-1" id="lblItemQty"></small></p>
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="txtItemPrice">Item Price</label>
-                <input class="form-control" id="txtItemPrice" placeholder="Item Price" type="text">
-                <p><small class="text-danger pl-1" id="lblItemPrice"></small></p>
-            </div>
-
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-primary me-md-2" id="btnSaveItem">Save</button>
-                <button class="btn btn-success me-md-2" id="btnUpdateItem">Update</button>
-                <button class="btn btn-danger me-md-2" id="btnDeleteCItem">Delete</button>
-            </div>
-
-        </div>
+        </section>
     </section>
-    <section class="row mt-4">
-        <div class="col">
-            <table class="table table-hover">
-                <thead class="bg-danger text-white">
-                <tr>
-                    <th>Item Code</th>
-                    <th>Item Name</th>
-                    <th>Item Qty</th>
-                    <th>Item Price</th>
-                </tr>
-                </thead>
-                <tbody id="itemTable"></tbody>
-            </table>
-        </div>
-    </section>
-</section>
 <!-- Item Content End-->
 
 <!-- order form -->
@@ -550,8 +583,14 @@
 <!--JavaScript DOM Lines -->
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/jquery/jquery-3.6.0.js"></script>
+
 <script src="db/DB.js"></script>
-<script src="controller/CustomerController.js"></script>
+<script src="model/Customer.js"></script>
+<script src="model/Item.js"></script>
+
+<script src="controller/CustomerController.js" ></script>
+<script src="controller/ItemController.js"></script>
+
 
 <!-- /#page-content-wrapper -->
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
