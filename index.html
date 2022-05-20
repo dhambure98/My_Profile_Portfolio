@@ -18,6 +18,18 @@
 </head>
 <body>
 
+<!--Loading Side-->
+<div class="loading">
+    <h2>L O A D I N G</h2>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
 <!-------Navigation Bar-------->
 <section class="header">
     <div class="logo">
@@ -705,21 +717,38 @@
             <p>Copyright &copy;2022. All Right Reserved By Akila Dhambure Liyanage </p>
         </div>
     </footer>
-</section>
 
 
-<script>
+    <script src="assets/jQuary/jquery-3.6.0.min.js"></script>
+    <script>
+        // main page loader
+        const loader = document.querySelector('.loading');
+        const main = document.querySelector('.container home');
 
-    // // Skills mouse rotare
-    // let number =document.getElementById("number");
-    // let counter = 0;
-    // setInterval(() => {
-    //     if(counter == 65)
-    //     counter += 1;
-    //     number.innerHTML = counter = "%" ;
-    // }, 20);
+        function init() {
+            setTimeout(() => {
+                loader.style.opacity = 0;
+                loader.style.display = 'none';
 
-</script>
+                main.style.display = 'block';
+                setTimeout(() => (main.style.opacity = 1), 50);
+            }, 4000);
+        }
+        init();
+    </script>
+
+    <script>
+
+        // // Skills mouse rotare
+        // let number =document.getElementById("number");
+        // let counter = 0;
+        // setInterval(() => {
+        //     if(counter == 65)
+        //     counter += 1;
+        //     number.innerHTML = counter = "%" ;
+        // }, 20);
+
+    </script>
 
 
 </body>
